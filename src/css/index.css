@@ -1,22 +1,26 @@
-header { width: 100%; height: 42px; background: #F9F9F9; }
+@charset "UTF-8";
+/* 头部样式 */
+header { width: 100%; }
 
-header .header_top { width: 1180px; height: 40px; margin: 0 auto; }
+header .header { width: 100%; background: #F9F9F9; height: 42px; }
 
-header .header_top ul { margin: 0; padding: 0; }
+header .header .header_top { width: 1180px; height: 42px; margin: 0 auto; }
 
-header .header_top ul li { height: 42px; font-size: 12px; line-height: 42px; text-align: center; }
+header .header .header_top ul { margin: 0; padding: 0; }
 
-header .header_top ul .log { margin-right: 39px; }
+header .header .header_top ul li { height: 42px; font-size: 12px; line-height: 42px; text-align: center; }
 
-header .header_top ul .log a { color: #000; }
+header .header .header_top ul .log { margin-right: 39px; }
 
-header .header_top ul .reg { margin-right: 30px; }
+header .header .header_top ul .log a { color: #000; }
 
-header .header_top ul .reg a { color: #000; }
+header .header .header_top ul .reg { margin-right: 30px; }
 
-header .logo { width: 1180px; height: 103px; margin: 0 auto; }
+header .header .header_top ul .reg a { color: #000; }
 
-header .logo ul { margin-top: 30px; height: 103px; }
+header .logo { width: 1180px; height: 103px; margin: 0 auto; background: #fff; }
+
+header .logo ul { padding-top: 30px; height: 103px; box-sizing: border-box; }
 
 header .logo ul .logo_left img { float: left; }
 
@@ -29,3 +33,61 @@ header .logo ul .logo_cen button { float: left; border: none; background: #FE572
 header .logo ul .logo_right { width: 166px; height: 35px; color: #000; font-size: 14px; line-height: 35px; background: #F5F5F5; text-align: center; }
 
 header .logo ul .logo_right span { color: #FE5722; }
+
+/* -----------------尾部样式---------------- */
+footer { width: 100%; background: #616161; padding: 30px 0; }
+
+footer .footer_nav { width: 1200px; margin: 0 auto; box-sizing: border-box; overflow: hidden; }
+
+footer .footer_nav dl { width: 200px; }
+
+footer .footer_nav dl dt { color: #E0E0E0; font-size: 14px; font-weight: bold; height: 30px; line-height: 30px; }
+
+footer .footer_nav dl dd { font-size: 14px; height: 24px; line-height: 24px; }
+
+footer .footer_nav dl dd a { color: #E0E0E0; }
+
+footer .footer_nav dl dd a:hover { color: #ff5722; }
+
+footer .Copyright { width: 100%; padding-top: 15px; }
+
+footer .Copyright p { text-align: center; font-size: 12px; color: #8D8D8D; }
+
+footer .Copyright p a { font-size: 12px; line-height: 20px; color: #BDBDBD; }
+
+footer .Copyright p img { margin-top: 10px; }
+
+/* -------------导航样式-------------------- */
+nav { width: 100%; border-bottom: 2px solid #FE5722; }
+
+nav #nav_con { width: 1180px; margin: 0 auto; }
+
+nav #nav_con #nav1 .nav_li1 { height: 42px; line-height: 42px; }
+
+nav #nav_con #nav1 .nav_li1 .a1 { padding: 0 25px; color: #333; font-size: 16px; }
+
+nav #nav_con #nav1 .nav_li1:hover { background: #FF7043; }
+
+nav #nav_con #nav1 .nav_li1:hover .a1 { color: #fff; }
+
+nav #nav_con #nav1 .nav_li1:first-child { background: #FE5722; position: relative; }
+
+nav #nav_con #nav1 .nav_li1:first-child .a1 { color: #fff; padding: 0 62px; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 { height: 400px; position: absolute; top: 44px; left: 0; z-index: 10; background: #fff; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 { width: 220px; height: 40px; padding-left: 15px; box-sizing: border-box; line-height: 40px; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .a2 { font-size: 14px; color: #333; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 { width: 740px; height: 400px; position: absolute; top: 0; left: 220px; background: skyblue; z-index: 999; display: none; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 .nav3_left { width: 470px; padding-top: 16px; background: pink; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .liebiao2 { background: rgba(200, 200, 200, 0.3); }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2:hover { background: #FF7043; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2:hover .a2 { color: #fff; }
+
+.main { height: 1000px; background: #000; }
