@@ -80,9 +80,27 @@ nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 { width: 220px; heigh
 
 nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .a2 { font-size: 14px; color: #333; }
 
-nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 { width: 740px; height: 400px; position: absolute; top: 0; left: 220px; background: skyblue; z-index: 999; display: none; }
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 { width: 740px; height: 400px; position: absolute; top: 0; left: 220px; background: #fff; z-index: 999; display: none; }
 
-nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 .nav3_left { width: 470px; padding-top: 16px; background: pink; }
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 .nav3_left { width: 470px; height: 400px; padding-top: 16px; box-sizing: border-box; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 .nav3_left li { width: 470px; padding-left: 20px; line-height: 42px; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 .nav3_left li .h4_a { font-size: 12px; height: 42px; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 .nav3_left li .h4_a a { color: #333; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 .nav3_left li .nav_list { margin-left: 30px; width: 370px; line-height: 42px; font-size: 12px; box-sizing: border-box; border-bottom: 1px dashed #ccc; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 .nav3_left li .nav_list a { padding: 0 5px; color: #666; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 .nav3_left li .nav_list a:hover { color: #ff5722; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 .nav3_right { padding: 10px; width: 270px; box-sizing: border-box; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 .nav3_right a { width: 100px; height: 40px; margin: 20px 0 0 20px; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 .nav3_right a img { width: 100px; height: 40px; float: left; }
 
 nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .liebiao2 { background: rgba(200, 200, 200, 0.3); }
 

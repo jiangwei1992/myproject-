@@ -2,7 +2,7 @@
 * @Author: jiangwei
 * @Date:   2017-08-31 20:35:08
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-01 21:57:03
+* @Last Modified time: 2017-09-02 14:06:53
 */
 
 require.config({
@@ -47,17 +47,27 @@ function jw_nav(data){
                 // 循环生成三级导航数据
                console.log(item2)
                $(item2.h4).each(function(idex3,item3){
-                    var $li3=$('<li></li>').append($('<a href="#"></a>').addClass('h4_a').text(item3)).appendTo($ul3)
+                    // 三模块左侧
+                    var $h4=$('<h4></h4>').addClass('h4_a fl').append($('<a href="#"></a>').text(item3))
+                    var $li3=$('<li></li>').addClass('clearfix').append($h4).appendTo($ul3)
+                    // 生成用于存放ul3模块 列表
+                    var $div2=$('<div></div>').appendTo($li3).addClass('nav_list fl')
                     $(item2.value).each(function(idex4,item4){
                         if(idex4==idex3){
                             $(item4).each(function(idex5,item5){
-                                var $a2=$('<a href="#"></a>').text(item5).appendTo($li3)
+                                var $a2=$('<a href="#"></a>').text(item5).appendTo($div2)
                             })
                         }
                         console.log(item2.value)
                     })
                })
-                
+               console.log($(item2.img))
+               // 第三模块右侧部分
+               $(item2.img).each(function(idex6,item6){
+                    var $a_r=$('<a href="#"></a>').addClass('fl').appendTo($ul4);
+                    var $img=$('<img src="img/'+item6+'.jpg" alt="" />').appendTo($a_r)
+               })
+                // 第三模块淡入淡出
                 $li2.hover(
                     function(){
                     $div.fadeIn('slow', function() {
@@ -70,10 +80,7 @@ function jw_nav(data){
                   }
                 )    
             })
-        }
-
-            
-            
+        }          
     })
     
 }
