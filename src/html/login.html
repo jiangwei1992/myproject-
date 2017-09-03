@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8" />
     <title>用户登录-阳光海淘</title>
-    <link rel="stylesheet" type="text/css" href="../css/login.css" />
+    
     <link rel="stylesheet" type="text/css" href="../css/base.css" />
-</head>
+    <script src="../lib/iconfont.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../css/login.css" />
 <body>
         <header>
             <div class="clearfix">
-                <h1 class="fl"><img src="../img/logo.png" alt="" /></h1>
+                <h1 class="fl"><a href="../index.html"><img src="../img/logo.png" alt="" /></a></h1>
                 <h3 class="fl">欢迎登录</h3>
             </div>
         </header>
@@ -18,16 +20,37 @@
                 <img src="../img/login.jpg" alt="" />
             </div>
             <div class="table">
-                <p class="log_p1">用户登录<span>立即注册</span></p>
+                <p class="log_p1">用户登录<a href="./reg.html">立即注册</a></p>
                 <input type="text" placeholder="邮箱/手机号"/><br />
                 <input type="password" placeholder="密码"/><br />
-                <input type="checkbox" id="automatic"/><label for="automatic">自动登录</label> <a href="#">忘记密码</a><br />
-                <button>登录</button>
+                <input type="checkbox" id="automatic"/><label for="automatic">自动登录</label> <a href="#" id="find">忘记密码？</a><br />
+                <button>登 录</button>
                 <p class="log_p2">使用合作网站账号登录商城：</p>
-                <p><i></i><i></i><i></i><i></i></p>
-
+                <!-- 字体图标 -->
+                <a href="https://auth.alipay.com/login/express.htm">
+                    <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-zhifubao"></use>
+                    </svg>
+                </a>
+                <a href="https://graph.qq.com/oauth/show?which=Login&display=pc&response_type=code&client_id=101399366&redirect_uri=http%3a%2f%2fwww.i-sunny.cn%2fopenid%2fOpenIdEntry%2fhishop_plugins_openid_qq_qqservice&state=hishop&scope=get_user_info">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                </a>
+                <a href="https://oauth.taobao.com/authorize?response_type=code&client_id=23775284&redirect_uri=http://www.i-sunny.cn/openid/OpenIdEntry/hishop_plugins_openid_taobao_taobaoservice&view=web&state=hishop">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-taobao"></use>
+                    </svg>
+                </a>
+                <a href="https://open.weixin.qq.com/connect/qrconnect?appid=wx1a2680d6cf16fa1d&redirect_uri=http%3a%2f%2fwww.i-sunny.cn%2fopenid%2fOpenIdEntry%2fhishop_plugins_openid_weixin_weixinservice&response_type=code&scope=snsapi_login&state=hishop">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weixin"></use>
+                    </svg>
+                </a>
+               
             </div>
         </main>
-        <footer></footer>
+        <footer class="login"></footer>
+        <script type="text/javascript" src="../lib/require.js" data-main="../js/reg.js"></script>
 </body>
 </html>

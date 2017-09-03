@@ -1,0 +1,9 @@
+.broadside { width: 35px; height: 100%; position: fixed; top: 0; right: 0; bottom: 0; text-align: right; }
+
+.broadside .letter { width: 6px; height: 100%; background: #3B3B3B; position: absolute; top: 0; right: 0; bottom: 0px; }
+
+.broadside .nav_right { width: 29px; height: 107px; position: fixed; top: 50%; right: 6px; transform: translateY(-50%); }
+
+.broadside .nav_right a { display: block; margin-top: 1px; background: #3B3B3B; width: 29px; height: 35px; text-align: center; line-height: 35px; }
+
+.broadside .nav_right a .icon { width: 20px; height: 20px; vertical-align: -0.15em; fill: currentColor; overflow: hidden; color: #fff; }

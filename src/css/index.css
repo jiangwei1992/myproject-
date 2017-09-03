@@ -49,13 +49,13 @@ footer .footer_nav dl dd a { color: #E0E0E0; }
 
 footer .footer_nav dl dd a:hover { color: #ff5722; }
 
-footer .Copyright { width: 100%; padding-top: 15px; }
+footer .Copyright { width: 100%; padding-top: 10px; }
 
-footer .Copyright p { text-align: center; font-size: 12px; color: #8D8D8D; }
+footer .Copyright p { text-align: center; font-size: 12px; color: #8D8D8D; margin-top: 5px; }
 
 footer .Copyright p a { font-size: 12px; line-height: 20px; color: #BDBDBD; }
 
-footer .Copyright p img { margin-top: 10px; }
+footer .Copyright p img { margin-top: 5px; }
 
 /* -------------导航样式-------------------- */
 nav { width: 100%; border-bottom: 2px solid #FE5722; }
