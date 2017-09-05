@@ -55,7 +55,7 @@ footer .Copyright p { text-align: center; font-size: 12px; color: #8D8D8D; margi
 
 footer .Copyright p a { font-size: 12px; line-height: 20px; color: #BDBDBD; }
 
-footer .Copyright p img { margin-top: 5px; }
+footer .Copyright p img { margin: 0 auto; }
 
 /* -------------导航样式-------------------- */
 nav { width: 100%; border-bottom: 2px solid #FE5722; }
@@ -108,14 +108,102 @@ nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2:hover { background: #
 
 nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2:hover .a2 { color: #fff; }
 
+.main { background: #F3F3F3; }
+
+.main .carousel { position: relative; }
+
 .main .carousel ul { width: 100%; height: 400px; position: relative; }
 
 .main .carousel ul li { width: 100%; height: 400px; position: absolute; top: 0; left: 0; display: none; }
 
 .main .carousel ul li img { width: 100%; height: 400px; }
 
-.main .carousel .point { padding: 5px; background: rgba(255, 255, 255, 0.3); position: absolute; top: 360px; left: 50%; }
+.main .carousel .point { padding: 5px; background: rgba(200, 200, 200, 0.5); position: absolute; top: 85%; left: 50%; border-radius: 5px; }
 
-.main .carousel .point span { display: block; height: 12px; height: 12px; border-radius: 50%; background: #fff; }
+.main .carousel .point span { display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #fff; margin-left: 10px; line-height: 22px; }
 
 .main .carousel .point .cur { background: #FF0000; }
+
+.main .scare { width: 1180px; margin: 20px auto; }
+
+.main .scare .main_top { height: 180px; }
+
+.main .scare .main_top li { margin-left: 20px; }
+
+.main .scare .main_top li img { width: 280px; height: 180px; }
+
+.main .scare .main_top li:first-child { margin-left: 0; }
+
+.main .scare .rush { height: 365px; width: 1180px; box-sizing: border-box; margin-top: 20px; }
+
+.main .scare .rush ul { width: 940px; background: #fff; height: 365px; padding-left: 16px; padding-top: 16px; box-sizing: border-box; }
+
+.main .scare .rush ul h4 { font-size: 18px; height: 18px; line-height: 18px; }
+
+.main .scare .rush ul h4 span { font-weight: normal; margin-left: 750px; font-size: 14px; }
+
+.main .scare .rush .rush_r { background: #fff; width: 220px; height: 365px; }
+
+.main .scare .new_arrival { width: 1180px; height: 368px; background: #fff; margin-top: 20px; }
+
+.main .scare .new_arrival h4 { font-size: 18px; height: 54px; line-height: 54px; width: 195px; text-align: center; color: #FF5722; border-top: 2px solid #FF5722; box-sizing: border-box; }
+
+.main .central { width: 1180px; margin: 0 auto; }
+
+.main .central p { width: 1180px; height: 50px; padding-left: 44px; font-size: 18px; line-height: 50px; color: #333; box-sizing: border-box; }
+
+.main .central p a { font-size: 14px; line-height: 50px; float: right; color: #333333; margin-right: 16px; }
+
+.main .central p a:hover { color: #FF5722; }
+
+.main .central .cen_right { width: 220px; height: 600px; background: #fff; }
+
+.main .central .cen_left { width: 220px; height: 600px; }
+
+.main .central .cen_mid { width: 740px; height: 600px; }
+
+.main .central .child { width: 1180px; }
+
+.main .central .child .cen_right p { font-size: 16px; height: 50px; line-height: 50px; padding-left: 20px; color: #FF5722; }
+
+.main .central .hairdress .cen_right .bandright { width: 220px; height: 290px; }
+
+.main .central .hairdress .cen_right .mrright { margin-top: 20px; width: 220px; height: 290; }
+
+.main .central .food .cen_left a:nth-child(2) { display: block; margin-top: 18px; }
+
+.main .central .home .cen_left a:nth-child(2) { display: block; margin-top: 18px; }
+
+.main .central .home .cen_right li { margin-bottom: 20px; }
+
+.main .central .home .cen_right li:last-child { margin-bottom: 0; }
+
+.main .central .appliances .cen_right .sm_righttop { width: 220px; height: 290px; }
+
+.main .central .appliances .cen_right .sm_rightbut { margin-top: 20px; width: 220px; height: 290px; }
+
+.main .central .food .cen_right li { margin-bottom: 20px; }
+
+.main .central .food .cen_right li:last-child { margin-bottom: 0; }
+
+.main .central .brand { width: 1180px; height: 90px; margin: 18px 0; }
+
+.main .hobby { width: 1180px; height: 342px; margin: 0 auto; }
+
+.main .hobby p { height: 42px; width: 1180px; font-size: 18px; line-height: 24px; text-align: center; }
+
+.main .hobby ul { width: 1180px; height: 300px; background: #fff; }
+
+.main .new { width: 1180px; margin: 30px auto; }
+
+.main .new ul { height: 340px; }
+
+.main .new ul .new_p { width: 440px; height: 340px; }
+
+.main .new ul .storenew { width: 290px; height: 340px; border-right: 1px solid #ccc; box-sizing: border-box; }
+
+.main .new ul .storenew h4 { padding: 19px 0 0 32px; color: #333; }
+
+.main .new ul .unboxing { width: 450px; height: 340px; }
+
+.main .new ul .unboxing h4 { padding: 19px 0 0 32px; color: #333; }

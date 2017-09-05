@@ -1,0 +1,79 @@
+header{width:100%;
+    .header{width:100%;background:#F9F9F9;height:42px;
+        .header_top{width:1180px;height:42px;margin:0 auto;
+            ul{ margin:0 ;padding:0;
+                li{height:42px;font-size:12px;
+                    line-height:42px;text-align:center;}
+                .log{margin-right:39px;
+                    a{color:#000;}
+                }
+                .reg{margin-right:30px;a {color:#000;}
+                }
+            }   
+        }
+    }
+    .logo{width:1180px;height:103px;margin:0 auto;background:#fff;
+        ul{
+           padding-top:30px;height:103px;box-sizing:border-box;
+           .logo_left{
+                img{float:left;}
+           }
+            .logo_cen{margin-left:165px;
+                
+                input{float:left;width:388px;height:35px;border:2px solid #FE5722;box-sizing:border-box;border-right:none;outline:none;}
+                
+                button{float:left;border:none;background:#FE5722;width:95px;height:35px;text-align:center;line-height:35px;font-size:16px;color:rgba(255,255,255,0.9);outline:none;}
+            }
+            .logo_right{width:166px;height:35px;color:#000;font-size:14px;line-height:35px;background:#F5F5F5;text-align:center;
+                span{color:#FE5722;}
+            }
+        }
+    }
+}
+
+/* -------------导航样式-------------------- */
+nav{width:100%;border-bottom:2px solid #FE5722;
+    #nav_con{width:1180px;margin:0 auto;
+       #nav1{
+            .nav_li1{height:42px;line-height:42px;
+                .a1{padding:0 25px;color:#333;font-size:16px;}
+            }
+            .nav_li1:hover{ background:#FF7043;
+                .a1{color:#fff}
+            }
+            .nav_li1:first-child{background:#FE5722;position:relative;
+                .a1{color:#fff;padding:0 62px;}
+                .nav_pri2{height:400px;position:absolute;top:44px;left:0;z-index:10;background:#fff;
+                    .nav_li2{width:220px;height:40px;padding-left:15px;box-sizing:border-box;line-height:40px;
+                        .a2{font-size:14px;color:#333;}
+                        .nav_pri3{width:740px;height:400px;position:absolute;top:0;left:220px;background:#fff;z-index:999;display:none;
+                            .nav3_left{width:470px;height:400px;padding-top:16px;box-sizing:border-box;
+                                li{width:470px;padding-left:20px;line-height:42px;
+                                    .h4_a{font-size:12px;height:42px;
+                                        a{color:#333;}
+                                    }
+                                    .nav_list{margin-left:30px;width:370px;
+                                        line-height:42px; font-size:12px;box-sizing:border-box;border-bottom:1px dashed #ccc;
+                                        a{padding:0 5px;color:#666;}
+                                        a:hover{color:#ff5722;}
+                                    }
+                                }
+
+                            }
+                            .nav3_right{padding:10px;width:270px;box-sizing:border-box;
+                                a{  width:100px;height:40px;margin:20px 0 0 20px;
+                                    img{width:100px;height:40px;float:left;}
+                                }
+                            }
+                        }   
+                    }
+                    .liebiao2{background:rgba(200,200,200,0.3)}
+                    .nav_li2:hover{background:#FF7043;
+                        .a2{color:#fff;}
+                    }
+                }
+            }
+       } 
+    }
+
+}

@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/* 头部样式 */
+/* -----------------尾部样式---------------- */
+footer { width: 100%; background: #616161; padding: 30px 0; }
+
+footer .footer_nav { width: 1200px; margin: 0 auto; box-sizing: border-box; overflow: hidden; }
+
+footer .footer_nav dl { width: 200px; }
+
+footer .footer_nav dl dt { color: #E0E0E0; font-size: 14px; font-weight: bold; height: 30px; line-height: 30px; }
+
+footer .footer_nav dl dd { font-size: 14px; height: 24px; line-height: 24px; }
+
+footer .footer_nav dl dd a { color: #E0E0E0; }
+
+footer .footer_nav dl dd a:hover { color: #ff5722; }
+
+footer .Copyright { width: 100%; padding-top: 10px; }
+
+footer .Copyright p { text-align: center; font-size: 12px; color: #8D8D8D; margin-top: 5px; }
+
+footer .Copyright p a { font-size: 12px; line-height: 20px; color: #BDBDBD; }
+
+footer .Copyright p img { margin: 0 auto; }

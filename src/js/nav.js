@@ -2,7 +2,7 @@
 * @Author: jiangwei
 * @Date:   2017-08-31 20:35:08
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-04 20:48:42
+* @Last Modified time: 2017-09-05 22:18:33
 */
 
 require.config({
@@ -11,7 +11,7 @@ require.config({
     }
 })
 
-require(["jquery","youce",'index'],function($){
+require(["jquery"],function($){
     // ajax请求数据
     $.ajax({
         url:"api/nav.php",

@@ -1,0 +1,85 @@
+@charset "UTF-8";
+header { width: 100%; }
+
+header .header { width: 100%; background: #F9F9F9; height: 42px; }
+
+header .header .header_top { width: 1180px; height: 42px; margin: 0 auto; }
+
+header .header .header_top ul { margin: 0; padding: 0; }
+
+header .header .header_top ul li { height: 42px; font-size: 12px; line-height: 42px; text-align: center; }
+
+header .header .header_top ul .log { margin-right: 39px; }
+
+header .header .header_top ul .log a { color: #000; }
+
+header .header .header_top ul .reg { margin-right: 30px; }
+
+header .header .header_top ul .reg a { color: #000; }
+
+header .logo { width: 1180px; height: 103px; margin: 0 auto; background: #fff; }
+
+header .logo ul { padding-top: 30px; height: 103px; box-sizing: border-box; }
+
+header .logo ul .logo_left img { float: left; }
+
+header .logo ul .logo_cen { margin-left: 165px; }
+
+header .logo ul .logo_cen input { float: left; width: 388px; height: 35px; border: 2px solid #FE5722; box-sizing: border-box; border-right: none; outline: none; }
+
+header .logo ul .logo_cen button { float: left; border: none; background: #FE5722; width: 95px; height: 35px; text-align: center; line-height: 35px; font-size: 16px; color: rgba(255, 255, 255, 0.9); outline: none; }
+
+header .logo ul .logo_right { width: 166px; height: 35px; color: #000; font-size: 14px; line-height: 35px; background: #F5F5F5; text-align: center; }
+
+header .logo ul .logo_right span { color: #FE5722; }
+
+/* -------------导航样式-------------------- */
+nav { width: 100%; border-bottom: 2px solid #FE5722; }
+
+nav #nav_con { width: 1180px; margin: 0 auto; }
+
+nav #nav_con #nav1 .nav_li1 { height: 42px; line-height: 42px; }
+
+nav #nav_con #nav1 .nav_li1 .a1 { padding: 0 25px; color: #333; font-size: 16px; }
+
+nav #nav_con #nav1 .nav_li1:hover { background: #FF7043; }
+
+nav #nav_con #nav1 .nav_li1:hover .a1 { color: #fff; }
+
+nav #nav_con #nav1 .nav_li1:first-child { background: #FE5722; position: relative; }
+
+nav #nav_con #nav1 .nav_li1:first-child .a1 { color: #fff; padding: 0 62px; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 { height: 400px; position: absolute; top: 44px; left: 0; z-index: 10; background: #fff; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 { width: 220px; height: 40px; padding-left: 15px; box-sizing: border-box; line-height: 40px; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .a2 { font-size: 14px; color: #333; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 { width: 740px; height: 400px; position: absolute; top: 0; left: 220px; background: #fff; z-index: 999; display: none; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 .nav3_left { width: 470px; height: 400px; padding-top: 16px; box-sizing: border-box; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 .nav3_left li { width: 470px; padding-left: 20px; line-height: 42px; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 .nav3_left li .h4_a { font-size: 12px; height: 42px; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 .nav3_left li .h4_a a { color: #333; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 .nav3_left li .nav_list { margin-left: 30px; width: 370px; line-height: 42px; font-size: 12px; box-sizing: border-box; border-bottom: 1px dashed #ccc; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 .nav3_left li .nav_list a { padding: 0 5px; color: #666; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 .nav3_left li .nav_list a:hover { color: #ff5722; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 .nav3_right { padding: 10px; width: 270px; box-sizing: border-box; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 .nav3_right a { width: 100px; height: 40px; margin: 20px 0 0 20px; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2 .nav_pri3 .nav3_right a img { width: 100px; height: 40px; float: left; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .liebiao2 { background: rgba(200, 200, 200, 0.3); }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2:hover { background: #FF7043; }
+
+nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2:hover .a2 { color: #fff; }

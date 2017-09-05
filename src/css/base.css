@@ -4,6 +4,8 @@
 
 .clearfix::after { content: ""; height: 0; clear: both; display: block; overflow: hidden; visibility: hidden; }
 
+img { display: block; }
+
 .icon { width: 20px; height: 20px; vertical-align: -0.15em; fill: currentColor; overflow: hidden; border: 1px solid #ccc; border-radius: 2px; padding: 5px; }
 
 a { text-decoration: none; }

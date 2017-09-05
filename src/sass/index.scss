@@ -45,7 +45,7 @@ footer{width:100%;background:#616161;padding:30px 0;
     .Copyright{width:100%;padding-top:10px;
         p{text-align:center;font-size:12px;color:#8D8D8D;margin-top:5px;
             a{font-size:12px;line-height:20px;color:#BDBDBD;}
-            img{margin-top:5px;}
+            img{margin:0 auto;}
         }
     }
 }
@@ -97,16 +97,109 @@ nav{width:100%;border-bottom:2px solid #FE5722;
 
 }
 // 内容样式
-.main{
-    .carousel{
+.main{background:#F3F3F3;
+    // 轮播图样式
+    .carousel{position:relative;
         ul{width:100%;height:400px;position:relative;
             li{width:100%;height:400px;position:absolute;top:0;left:0;display:none;
                 img{width:100%;height:400px;}
             }
         }
-        .point{padding:5px;background:rgba(255,255,255,.3);position:absolute;top:360px;left:50%;
-            span{display:block;height:12px;height:12px;border-radius:50%;background:#fff;}
+        .point{padding:5px;background:rgba(200,200,200,.5);position:absolute;top:85%;left:50%;border-radius:5px;
+            span{display:inline-block;width:12px;height:12px;border-radius:50%;background:#fff;margin-left:10px;line-height:22px;}
             .cur{background:#FF0000;}
+        }
+    }
+    .scare{width:1180px;margin:20px auto;
+        .main_top{height:180px;
+            li{margin-left:20px;
+                img{width:280px;height:180px;}
+            }
+            li:first-child{margin-left:0;
+       
+            }
+        }
+        .rush{height:365px;width:1180px;box-sizing:border-box;margin-top:20px;
+            ul{width:940px;background:#fff;height:365px;padding-left:16px;padding-top:16px;box-sizing:border-box;
+                h4{font-size:18px;height:18px;line-height:18px;
+                    span{font-weight:normal;margin-left:750px;font-size:14px;}
+                }
+            }
+            .rush_r{background:#fff;width:220px;height:365px;}  
+        }
+        .new_arrival{width:1180px;height:368px;background:#fff;margin-top:20px;
+            h4{font-size:18px;height:54px;line-height:54px;width:195px;text-align:center;color:#FF5722;border-top:2px solid #FF5722;box-sizing:border-box;}
+        }
+    
+    }
+    //内容区域相同样式布局ss
+    .central{ width:1180px;margin:0 auto;
+        p{width:1180px;height:50px;padding-left:44px;font-size:18px;line-height:50px;color:#333;box-sizing:border-box;
+                a{font-size:14px;line-height:50px;float:right;color:#333333;margin-right:16px;}
+                a:hover{color:#FF5722;}
+            }
+        .cen_right{width:220px;height:600px;background:#fff;} 
+        .cen_left{width:220px;height:600px;}
+        .cen_mid{width:740px;height:600px;}
+
+
+        .child{width:1180px;
+            .cen_right{
+                p{font-size:16px;height:50px;line-height:50px;padding-left:20px;color:#FF5722;}
+            }        
+        }
+        .hairdress{
+            .cen_right{
+                .bandright{width:220px;height:290px;;}
+                .mrright{margin-top:20px;width:220px;height:290;}
+            }
+        }
+        .food{
+            .cen_left{
+                a:nth-child(2){display:block;margin-top:18px;}
+            }
+        }
+        .home{
+            .cen_left{
+                a:nth-child(2){display:block;margin-top:18px;}
+            }
+            .cen_right{
+                li{margin-bottom:20px;}
+                li:last-child{margin-bottom:0;}
+            }
+        }
+        .appliances{
+            .cen_right{
+                .sm_righttop{width:220px;height:290px;}
+                .sm_rightbut{margin-top:20px;width:220px;height:290px;
+                    
+                }
+            }
+        }
+        .food{
+            .cen_right{
+                li{margin-bottom:20px;}
+                li:last-child{margin-bottom:0;}
+            }
+        }
+        .brand{ width:1180px;height:90px;margin:18px 0;}
+    }
+
+    // 猜你喜欢区域
+    .hobby{width:1180px;height:342px;margin:0 auto;
+        p{height:42px;width:1180px;font-size:18px;line-height:24px;text-align:center;}
+        ul{width:1180px;height:300px;background:#fff;}
+    
+    }
+    .new{width:1180px;margin:30px auto;
+        ul{height:340px;
+            .new_p{width:440px;height:340px;}
+            .storenew{width:290px;height:340px;border-right:1px solid #ccc;box-sizing:border-box;
+                h4{padding:19px 0 0 32px;color:#333;}
+            }
+            .unboxing{width:450px;height:340px;
+                 h4{padding:19px 0 0 32px;color:#333;}
+            }
         }
     }
 }

@@ -1,5 +1,12 @@
 /* 
 * @Author: Marte
+* @Date:   2017-09-05 20:53:42
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-09-05 22:01:21
+*/
+
+/* 
+* @Author: Marte
 * @Date:   2017-09-03 21:11:14
 * @Last Modified by:   Marte
 * @Last Modified time: 2017-09-05 18:53:30
@@ -11,9 +18,7 @@ require.config({
         "commom":"../lib/common"
     }
 })
-
 require(["jquery","commom"],function($){
-    $('.dh').load('./html/footer.html .broadside',function(){
         $('.nav_right li').hover(
             function(){
                 $(this).find("span").stop().animate({left:-70}, 300)
@@ -80,5 +85,5 @@ require(["jquery","commom"],function($){
             $(this).parents('.message').find('.newshow').css({display:'block'})
            console.log($(this)) 
         })
-    });
+    
 })
