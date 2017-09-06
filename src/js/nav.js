@@ -2,7 +2,7 @@
 * @Author: jiangwei
 * @Date:   2017-08-31 20:35:08
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-05 22:18:33
+* @Last Modified time: 2017-09-06 11:49:07
 */
 
 require.config({
@@ -14,7 +14,7 @@ require.config({
 require(["jquery"],function($){
     // ajax请求数据
     $.ajax({
-        url:"api/nav.php",
+        url:"./api/nav.php",
         type:"get",
         async:true,
         success:function(data){

@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-04 20:13:02
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-05 22:40:16
+* @Last Modified time: 2017-09-06 09:06:05
 */
 
 // 轮播图
@@ -80,6 +80,8 @@ require(["jquery"],function($){
         //     // 右侧
         //     $('<div></div>').addClass('cen_right').appendTo(item);
         // })
-        
+       /*--------------------------尾部-------------------------*/ 
+    $('.Copyright p img').attr({src:"./img/footer.gif"})
+
   })      
 })

@@ -55,7 +55,20 @@ function vCode(){
 
 	return res;
 }
+function vCodenum(){
+	var arr_char = '0123456789'.split('');
 
+	var res = '';
+	for(var i=0;i<4;i++){
+		// 获取随机索引值
+		var idx = parseInt(Math.random()*arr_char.length);
+
+		// 根据索引值获取字符，并拼接
+		res += arr_char[idx];
+	}
+
+	return res;
+}
 /**
  * [获取当前元素得前一个元素]
  * @param  {Element} ele [当前元素]

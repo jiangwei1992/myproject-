@@ -18,11 +18,33 @@ main form label { display: inline-block; width: 234px; text-align: right; height
 
 main form input { height: 42px; width: 280px; margin-bottom: 15px; margin-left: 22px; box-sizing: border-box; outline: none; }
 
+main form .username { font-size: 12px; color: #ccc; }
+
+main form .ema { font-size: 12px; color: #ccc; }
+
+main form .legal_pas { font-size: 12px; color: #ccc; }
+
+main form .legal_pas2 { font-size: 12px; color: #ccc; }
+
+main form .legal_ver { font-size: 12px; color: #ccc; }
+
+main form .iconfont { font-size: 18px; color: #ccc; margin-left: 20px; }
+
+main form .active_fail { color: #FE5722; }
+
+main form .active_true { color: #58bc58; }
+
+main form .legal { font-size: 12px; }
+
+main form .legal_email { font-size: 12px; }
+
 main form #verify { width: 160px; }
+
+main form .ver { display: inline-block; width: 100px; height: 42px; line-height: 42px; text-align: center; background: #ccc; margin-left: 10px; }
 
 main form em { font-size: 12px; font-style: normal; height: 42px; line-height: 42px; padding-left: 10px; }
 
-main form em i { color: #0658B4; }
+main form em span { color: #0658B4; cursor: pointer; }
 
 main form #statement { width: 13px; height: 13px; margin-left: 256px; }
 
@@ -30,6 +52,8 @@ main form #agreement { display: inline-block; font-size: 12px; height: 42px; wid
 
 main form a { color: #FE5722; font-size: 12px; }
 
-main form button { width: 300px; height: 40px; border: none; background: #FE5722; color: #fff; margin-left: 240px; }
+main form div { width: 300px; height: 40px; border: none; background: #ccc; color: #fff; margin-left: 240px; text-align: center; line-height: 40px; cursor: pointer; }
+
+main form div.active { background: #FE5722; }
 
 footer { background: #fff; }
