@@ -10,6 +10,8 @@ header .header .header_top ul { margin: 0; padding: 0; }
 
 header .header .header_top ul li { height: 42px; font-size: 12px; line-height: 42px; text-align: center; }
 
+header .header .header_top ul li span { margin-left: 10px; color: #FE5722; }
+
 header .header .header_top ul .log { margin-right: 39px; }
 
 header .header .header_top ul .log a { color: #000; }
@@ -148,9 +150,19 @@ nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2:hover .a2 { color: #f
 
 .main .scare .new_arrival h4 { font-size: 18px; height: 54px; line-height: 54px; width: 195px; text-align: center; color: #FF5722; border-top: 2px solid #FF5722; box-sizing: border-box; }
 
+.main .scare .new_arrival ul { width: 1180px; height: 314px; }
+
+.main .scare .new_arrival ul li { width: 236px; height: 314px; }
+
+.main .scare .new_arrival ul li p { font-size: 14px; height: 40px; line-height: 20px; color: #333; overflow: hidden; margin: 10px; }
+
+.main .scare .new_arrival ul li .newprice { font-size: 16px; color: #FF5722; margin-left: 10px; }
+
+.main .scare .new_arrival ul li .oldprice { font-size: 12px; color: #B5B5B5; }
+
 .main .central { width: 1180px; margin: 0 auto; }
 
-.main .central p { width: 1180px; height: 50px; padding-left: 44px; font-size: 18px; line-height: 50px; color: #333; box-sizing: border-box; }
+.main .central p { height: 50px; padding-left: 44px; font-size: 18px; line-height: 50px; color: #333; box-sizing: border-box; }
 
 .main .central p a { font-size: 14px; line-height: 50px; float: right; color: #333333; margin-right: 16px; }
 
@@ -161,6 +173,22 @@ nav #nav_con #nav1 .nav_li1:first-child .nav_pri2 .nav_li2:hover .a2 { color: #f
 .main .central .cen_left { width: 220px; height: 600px; }
 
 .main .central .cen_mid { width: 740px; height: 600px; }
+
+.main .central .cen_mid ul li { width: 222px; height: 292px; background: #fff; padding-top: 20px; margin-left: 19px; box-sizing: border-box; margin-bottom: 18px; }
+
+.main .central .cen_mid ul li a { width: 180px; height: 180px; }
+
+.main .central .cen_mid ul li a img { width: 180px; height: 180px; margin: 0 auto; }
+
+.main .central .cen_mid ul li p { font-size: 14px; height: 20px; line-height: 20px; color: #333; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; margin: 10px; padding-left: 0; }
+
+.main .central .cen_mid ul li p:hover { color: #FF5722; }
+
+.main .central .cen_mid ul li .newprice { font-size: 16px; color: #FF5722; margin-left: 50px; }
+
+.main .central .cen_mid ul li .oldprice { font-size: 12px; color: #B5B5B5; }
+
+.main .central .cen_mid ul li:hover { box-shadow: -5px 5px 5px 4px #ddd; }
 
 .main .central .child { width: 1180px; }
 
