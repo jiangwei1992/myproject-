@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-04 20:13:02
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-07 22:57:47
+* @Last Modified time: 2017-09-08 10:15:49
 */
 
 // 轮播图
@@ -30,7 +30,6 @@ require(["jquery"],function($){
                     console.log(arr[1])
                     var name = arr[1];
                     $('.names').html(name);
-                    $('')
                     $(".log a").html("");
                     $(".log span").css({display:'block'})
 
@@ -158,7 +157,7 @@ require(["jquery"],function($){
             url:"api/index.php",
             type:"get",
             async:true,
-            data:{pageNo:1,qty:6,cate:"家居"},
+            data:{pageNo:2,qty:6,cate:"家居"},
               success:function(data){
                 // 调用封装好的函数
                 structure(data,6,".home .cen_mid")
@@ -169,7 +168,7 @@ require(["jquery"],function($){
             url:"api/index.php",
             type:"get",
             async:true,
-            data:{pageNo:1,qty:6,cate:"家居"},
+            data:{pageNo:4,qty:6,cate:"美妆"},
               success:function(data){
                 // 调用封装好的函数
                 structure(data,6,".health .cen_mid")

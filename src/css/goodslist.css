@@ -1,0 +1,75 @@
+.navbox #nav_con { width: 1200px; margin: 0 auto; }
+
+.navbox #nav_con #nav1 .nav_li1 .nav_pri2 { display: none; }
+
+.navbox #nav_con #nav1 .nav_li1:first-child:hover .nav_pri2 { display: block; }
+
+main { width: 100%; }
+
+main .cen { width: 1200px; margin: 0 auto; }
+
+main .cen .tit { font-size: 12px; height: 22px; color: #666; margin-top: 8px; line-height: 22px; }
+
+main .cen .cen_left { width: 208px; margin-right: 12px; box-sizing: border-box; border: 1px solid #ccc; border-top: 2px solid #FE5722; }
+
+main .cen .cen_left .sidebar .side_li { border-top: 1px solid #ccc; }
+
+main .cen .cen_left .sidebar .side_li .side_h4 { height: 30px; font-size: 14px; line-height: 30px; padding-left: 15px; border-bottom: 1px solid #ccc; }
+
+main .cen .cen_left .sidebar .side_li .side_h4 a { color: #686868; }
+
+main .cen .cen_left .sidebar .side_li .side_h4:hover a { color: #FE5722; }
+
+main .cen .cen_left .sidebar .side_li .sidebar2 { padding: 5px 15px; }
+
+main .cen .cen_left .sidebar .side_li .sidebar2 .side_li2 a { display: inline-block; width: 88px; height: 24px; font-size: 12px; line-height: 24px; color: #535353; }
+
+main .cen .cen_left .sidebar .side_li .sidebar2 .side_li2 a:hover { color: #FE5722; }
+
+main .cen .cen_right { width: 980px; box-sizing: border-box; }
+
+main .cen .cen_right .det_top { width: 980px; padding: 0 10px; border: 1px solid #ccc; box-sizing: border-box; }
+
+main .cen .cen_right .det_top h3 { font-size: 14px; height: 30px; line-height: 30px; color: #333333; border-bottom: 1px dashed #ccc; }
+
+main .cen .cen_right .det_top ul { padding: 10px 0; }
+
+main .cen .cen_right .det_cen { width: 980px; padding: 0 10px; border: 1px solid #ccc; margin: 20px 0 30px 0; box-sizing: border-box; }
+
+main .cen .cen_right .det_cen h3 { font-size: 14px; height: 30px; line-height: 30px; color: #333333; border-bottom: 1px dashed #ccc; }
+
+main .cen .cen_right .det_cen .band { padding: 13px 0; }
+
+main .cen .cen_right .det_cen .band p { font-size: 12px; line-height: 20px; padding-left: 34px; }
+
+main .cen .cen_right .det_cen .band p span { font-weight: 900; }
+
+main .cen .cen_right .det_cen .band p a { padding: 4px; color: #fff; background: #FE5722; }
+
+main .cen .cen_right .det_bot { width: 980px; padding: 5px 10px; border: 1px solid #ccc; box-sizing: border-box; border-top: 2px solid #FE5722; font-size: 12px; line-height: 20px; }
+
+main .cen .cen_right .det_bot input { outline: none; margin-right: 5px; }
+
+main .cen .cen_right .det_bot #startprice { width: 80px; }
+
+main .cen .cen_right .det_bot #endprice { width: 80px; }
+
+main .cen .cen_right .det_bot p { height: 30px; border-top: 1px solid #ccc; margin-top: 10px; }
+
+main .cen .cen_right .det_bot p a { height: 30px; line-height: 30px; padding: 0 15px; color: #333; border-right: 1px solid #ccc; }
+
+main .cen .cen_right .goodslist_cen { width: 980px; padding: 12px; }
+
+main .cen .cen_right .goodslist_cen .goods_comm { width: 221px; height: 322px; padding: 12px; }
+
+main .cen .cen_right .goodslist_cen .goods_comm a { width: 221px; height: 221px; border: 1px solid #ccc; }
+
+main .cen .cen_right .goodslist_cen .goods_comm a img { width: 221px; height: 221px; }
+
+main .cen .cen_right .goodslist_cen .goods_comm p.title { font-size: 12px; height: 40px; line-height: 20px; overflow: hidden; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+main .cen .cen_right .goodslist_cen .goods_comm .newprice { font-size: 16px; color: #FF5722; }
+
+main .cen .cen_right .goodslist_cen .goods_comm .oldprice { font-size: 12px; color: #B5B5B5; }
+
+main .cen .cen_right .goodslist_cen li:hover { box-shadow: -5px 5px 5px 4px #ddd; }

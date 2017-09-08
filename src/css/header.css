@@ -9,6 +9,8 @@ header .header .header_top ul { margin: 0; padding: 0; }
 
 header .header .header_top ul li { height: 42px; font-size: 12px; line-height: 42px; text-align: center; }
 
+header .header .header_top ul li span { margin-left: 10px; color: #FE5722; }
+
 header .header .header_top ul .log { margin-right: 39px; }
 
 header .header .header_top ul .log a { color: #000; }
