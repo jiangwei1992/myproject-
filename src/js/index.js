@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-04 20:13:02
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-08 10:15:49
+* @Last Modified time: 2017-09-09 18:17:45
 */
 
 // 轮播图
@@ -107,7 +107,7 @@ require(["jquery"],function($){
         res=res.splice(0,num);
        var eles= $(res).map(function(idex,item){
             return `<li class="comm fl">
-                        <a href="#"><img src="img/${item.imgurl}" alt="" /></a>
+                        <a href="/src/html/goods.html?goodsnum=${item.goodsnum}"><img src="img/${item.imgurl}" alt="" /></a>
                         <p class="title">${item.title}</p>
                         <span class="newprice">￥ ${item.nowprice}</span>
                         <span class="oldprice"><del>￥ ${item.oldprice}</del></span>
@@ -123,7 +123,7 @@ require(["jquery"],function($){
             url:"api/index.php",
             type:"get",
             async:true,
-            data:{pageNo:1,qty:6,cate:"母婴"},
+            data:{pageNo:1,qty:6,cate:"母婴专区"},
               success:function(data){
                 // 调用封装好的函数
                 structure(data,5,".new_arrival")
@@ -135,7 +135,7 @@ require(["jquery"],function($){
             url:"api/index.php",
             type:"get",
             async:true,
-            data:{pageNo:1,qty:6,cate:"母婴"},
+            data:{pageNo:1,qty:6,cate:"母婴专区"},
               success:function(data){
                 // 调用封装好的函数
                 structure(data,6,".child .cen_mid")
@@ -146,7 +146,7 @@ require(["jquery"],function($){
             url:"api/index.php",
             type:"get",
             async:true,
-            data:{pageNo:1,qty:6,cate:"美妆"},
+            data:{pageNo:1,qty:6,cate:"美妆个护"},
               success:function(data){
                 // 调用封装好的函数
                 structure(data,6,".hairdress .cen_mid")
@@ -157,7 +157,7 @@ require(["jquery"],function($){
             url:"api/index.php",
             type:"get",
             async:true,
-            data:{pageNo:2,qty:6,cate:"家居"},
+            data:{pageNo:2,qty:6,cate:"家居日用"},
               success:function(data){
                 // 调用封装好的函数
                 structure(data,6,".home .cen_mid")
@@ -168,7 +168,7 @@ require(["jquery"],function($){
             url:"api/index.php",
             type:"get",
             async:true,
-            data:{pageNo:4,qty:6,cate:"美妆"},
+            data:{pageNo:4,qty:6,cate:"美妆个护"},
               success:function(data){
                 // 调用封装好的函数
                 structure(data,6,".health .cen_mid")
@@ -178,7 +178,7 @@ require(["jquery"],function($){
             url:"api/index.php",
             type:"get",
             async:true,
-            data:{pageNo:1,qty:6,cate:"数码"},
+            data:{pageNo:1,qty:6,cate:"数码家电"},
               success:function(data){
                 // 调用封装好的函数
                 structure(data,6,".appliances .cen_mid")
@@ -188,7 +188,7 @@ require(["jquery"],function($){
             url:"api/index.php",
             type:"get",
             async:true,
-            data:{pageNo:1,qty:6,cate:"户外"},
+            data:{pageNo:1,qty:6,cate:"户外运动"},
               success:function(data){
                 // 调用封装好的函数
                 structure(data,6,".food .cen_mid")

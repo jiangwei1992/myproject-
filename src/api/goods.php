@@ -1,31 +1,33 @@
 <?php
 /**
  * @Author: Marte
- * @Date:   2017-09-07 19:12:21
+ * @Date:   2017-09-09 16:51:00
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-09-09 17:43:19
+ * @Last Modified time: 2017-09-09 20:26:06
  */
 
     //引入其他php文件
     include 'connect.php';
     
     // 获取前端传过来的数据
-    $pageNo = isset($_GET['pageNo']) ? $_GET['pageNo'] : 1;
-    $qty = isset($_GET['qty']) ? $_GET['qty'] : 10;
-    $cate = isset($_GET['cate']) ? $_GET['cate'] : '';
+    $goodsnum = isset($_GET['goodsnum']) ? $_GET['goodsnum'] : '';
+    $subclass = isset($_GET['subclassification']) ? $_GET['subclassification'] : '香水彩妆';
 
+    // echo $cate;
     // 编写sql语句
     $sql = "select * from goodlist";
-
     // 利用php条件语句拼接sql
-    if($cate){
-        $sql .= " where category='$cate'";
+    if($goodsnum){
+        $sql .= " where goodsnum='$goodsnum'";
+      
+    }else{
+        $sql .= " where subclassification='$subclass'";
+        // echo $subclass;
     }
+    // echo $sql;
+    // $startIdx = $qty*($pageNo-1);
 
-    $startIdx = $qty*($pageNo-1);
-
-    $sql .= " limit $startIdx,$qty";
-
+    // $sql .= " limit $startIdx,$qty";
 
     // 获取查询结果
     $result = $conn->query($sql);
@@ -42,10 +44,11 @@
 
     // 格式化数据
     // 关联数组
+    // // echo $cont;
     // $res = array(
     //     'pageNo'=>$pageNo,
     //     'qty'=>$qty,
-    //     'total'=>$conn->query('select count(*) from goods')->fetch_row()[0],
+    //     'total'=>$conn->query($cont)->fetch_row()[0],
     //     'data'=>$row,
     //     'status'=>200,
     //     'msg'=>'success'
@@ -60,8 +63,4 @@
 
     //关闭连接
     $conn->close();
-
-
-
-
 ?>

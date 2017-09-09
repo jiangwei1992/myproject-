@@ -73,3 +73,17 @@ main .cen .cen_right .goodslist_cen .goods_comm .newprice { font-size: 16px; col
 main .cen .cen_right .goodslist_cen .goods_comm .oldprice { font-size: 12px; color: #B5B5B5; }
 
 main .cen .cen_right .goodslist_cen li:hover { box-shadow: -5px 5px 5px 4px #ddd; }
+
+main .cen .cen_right .page { margin: 10px 0; }
+
+main .cen .cen_right .page li { font-size: 12px; line-height: 30px; color: #ccc; }
+
+main .cen .cen_right .page .prepage { width: 66px; height: 30px; line-height: 30px; border: 1px solid #ccc; border-radius: 5px; text-align: center; }
+
+main .cen .cen_right .page .nextpage { width: 66px; height: 30px; line-height: 30px; border: 1px solid #ccc; border-radius: 5px; text-align: center; }
+
+main .cen .cen_right .page .selfpage span { display: inline-block; width: 30px; height: 30px; line-height: 30px; border: 1px solid #ccc; border-radius: 5px; margin-left: 10px; text-align: center; }
+
+main .cen .cen_right .page .selfpage span:last-child { margin-right: 10px; }
+
+main .cen .cen_right .page .selfpage #actives { background: #FE5722; color: #fff; }

@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-08 09:14:44
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-08 22:54:38
+* @Last Modified time: 2017-09-09 18:17:22
 */
 
 require.config({
@@ -89,46 +89,185 @@ require(["jquery"],function($){
         var res=arr.data;
         var total=arr.total;
         var pageNo=Math.ceil(total/num);
-        console.log(pageNo)
+        // console.log(pageNo)
 
        //  // 截取所需要长度数组
        //  console.log(res)
         res=res.splice(0,num);
         var eles= $(res).map(function(idex,item){
             return `<li class="goods_comm fl">
-                        <a href="#"><img src="/src/img/${item.imgurl}" alt="" /></a>
+                        <a href="/src/html/goods.html?goodsnum=${item.goodsnum}"><img src="/src/img/${item.imgurl}" alt="" /></a>
                         <p class="title">${item.title}</p>
                         <span class="newprice">￥ ${item.nowprice}</span>
                         <span class="oldprice"><del>￥ ${item.oldprice}</del></span>
                     </li>`
         }).get().join(" ")
        var ul =$('<ul></ul>').addClass('clearfix goodslist_cen').append(eles);
-        $(ele).append(ul)
-        var div=$('<div></div>').addClass('page').appendTo(ul);
+        $(ele).empty();
+        $(ele).append(ul);
+        // 页码
+        
+         $('.selfpage').empty();
         for(var i=1;i<=pageNo;i++){
-            $('<span></span>').text(i).appendTo(div);
+            $('<span></span>').text(i).appendTo($('.selfpage'));
         }
-        $('<span></span>').html("我").appendTo(div).append($('<i class="pages"></i>'));
-        $('<b></b>').append().appendTo(div)
-
+        $('.nowpage').html(1);
+        $('.allpage').html(pageNo);
+        $('.allnum').html(total);
+        
     }
         // 读取链接数据
         var name= location.search.substring(1);
         var cates=name.split('=');
-        var cate=decodeURI(cates[1])
-        console.log(cate)
+        var cate=decodeURI(cates[1]);
+        console.log($('.classify'))
+        $('.classify').html(cate);
+        // console.log(cate)
+        var pageNo=1;
         $.ajax({
             url:"../api/goodslist.php",
             type:"get",
             async:true,
-            data:{pageNo:1,qty:20,cate:cate},
+            data:{pageNo:pageNo,qty:20,cate:cate},
             contentType:"application/x-www-form-urlencoded; charset=UTF-8",
               success:function(data){
 
-                console.log(data)
+                // console.log(data)
                 // 调用封装好的函数
                 structure(data,20,".goodslist")
+                $('.selfpage span').eq(pageNo-1).attr('id','actives');
               }
+        })
+
+        // 页码绑定点击事件
+        $('.selfpage').on('click','span',function(){ 
+               pageNo = $(this).index(".selfpage span")+1
+                console.log(pageNo)
+            $.ajax({
+                url:"../api/goodslist.php",
+                type:"get",
+                async:true,
+                data:{pageNo:pageNo,qty:20,cate:cate},
+                contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+                  success:function(data){
+
+                    // console.log(data)
+                    // 调用封装好的函数
+                    structure(data,20,".goodslist")
+                    $('.selfpage span').eq(pageNo-1).attr('id','actives');
+                    $('.nowpage').html(pageNo);
+                    console.log(pageNo)
+                    console.log($('.selfpage span'));
+                }
+            })
+            var scrollTop = $(window).scrollTop();
+            $('html,body').stop().animate({'scrollTop':0},0);
+        })
+
+        // 封装一个获取拥有某个classname在父元素中的位置
+        function idx(id){
+    // 根据参数id取得该节点
+            var obj = document.getElementById(id);
+            // 获取该节点的父节点
+            var p = obj.parentNode;
+            // 取得父节点下的所有节点
+            var tags = p.getElementsByTagName('*');
+            // 在父节点的所有子节点中查找自己所在的位置
+            for(var i=0,len=tags.length;i<len;i++){
+                // 找到节点，返回下标
+                if(tags[i] == obj){
+                    return i;
+                }
+            }
+        // 不在父节点中，返回-1
+            return -1;
+        }
+        
+        // 上一页
+        $('.prepage').on('click',function(){
+
+                pageNo=idx('actives')+1;
+                pageNo--;
+                if(pageNo==0){
+                    pageNo=1;
+                }
+                console.log(pageNo)
+                if(pageNo==1){
+                   $('.prepage').css({display:"none"});
+                    $('.nextpage').css({display:"block"}) ;
+                }else if(pageNo==$(".selfpage span").length){
+                   $('.nextpage').css({display:"none"});
+                    $('.prepage').css({display:"block"});  
+                }else{
+                     $('.prepage').css({display:"block"});
+                     $('.nextpage').css({display:"block"}) 
+                }
+               // pageNo = $(this).index(".selfpage span")+1
+                console.log(pageNo)
+            $.ajax({
+                url:"../api/goodslist.php",
+                type:"get",
+                async:true,
+                data:{pageNo:pageNo,qty:20,cate:cate},
+                contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+                  success:function(data){
+
+                    // console.log(data)
+                    // 调用封装好的函数
+                    structure(data,20,".goodslist")
+                    $('.selfpage span').eq(pageNo-1).attr('id',"actives");
+                    $('.nowpage').html(pageNo);
+                    console.log(pageNo)
+                    console.log($('.selfpage span'));
+                  }
+
+            })
+             var scrollTop = $(window).scrollTop();
+            $('html,body').stop().animate({'scrollTop':0},0);
+        })
+        
+        // 下一页
+                // 默认没有上一页
+                console.log(pageNo)
+                if(pageNo==1){
+                   $('.prepage').css({display:"none"}) 
+                }
+
+        $('.nextpage').on('click',function(){
+
+                pageNo=idx('actives')+1;
+                pageNo++;
+                console.log(pageNo)
+ 
+                if(pageNo==$(".selfpage span").length){
+                   $('.nextpage').css({display:"none"})
+                    $('.prepage').css({display:"block"}); 
+                }else{
+                     $('.prepage').css({display:"block"});
+                     $('.nextpage').css({display:"block"}) 
+                }
+               // pageNo = $(this).index(".selfpage span")+1
+                console.log(pageNo)
+            $.ajax({
+                url:"../api/goodslist.php",
+                type:"get",
+                async:true,
+                data:{pageNo:pageNo,qty:20,cate:cate},
+                contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+                  success:function(data){
+
+                    // console.log(data)
+                    // 调用封装好的函数
+                    structure(data,20,".goodslist")
+                    $('.selfpage span').eq(pageNo-1).attr('id',"actives");
+                    $('.nowpage').html(pageNo);
+                    console.log(pageNo)
+                    console.log($('.selfpage span'));
+                  }
+
+            })
+             var scrollTop = $(window).scrollTop();
+            $('html,body').stop().animate({'scrollTop':0},0);
         })
     })
     
