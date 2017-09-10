@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-04 20:13:02
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-09 18:17:45
+* @Last Modified time: 2017-09-11 02:08:20
 */
 
 // 轮播图
@@ -48,6 +48,29 @@ require(["jquery"],function($){
             $(".log a").html("登录");
            
         })
+
+        // 购物车
+          // 购物车
+        var cookies = document.cookie;
+        var numb=0;
+        if(cookies.length>0){
+            cookies = cookies.split('; ');
+            cookies.forEach(function(item){
+                var arr = item.split('=');
+                if(arr[0] == 'goods'){
+                    arr_goods = JSON.parse(arr[1]);
+                }
+                if(arr[0] == 'numb'){
+                   numb=arr[1];
+                }
+            })
+        }
+        if(numb!=0){
+            $('.logo_right span').html(numb);
+        }
+        
+
+        //=======-----------------------------------------
     var arr=[1,2,3,4,5];
     var $car_ul=$("<ul></ul>").addClass('car_ul').appendTo($('.carousel'))
     console.log($(arr))

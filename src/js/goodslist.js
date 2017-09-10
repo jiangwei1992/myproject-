@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-08 09:14:44
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-09 18:17:22
+* @Last Modified time: 2017-09-11 02:08:44
 */
 
 require.config({
@@ -48,6 +48,25 @@ require(["jquery"],function($){
             $(".log a").html("登录");
            
         })
+
+        // 购物车
+        var cookies = document.cookie;
+        var numb=0;
+        if(cookies.length>0){
+            cookies = cookies.split('; ');
+            cookies.forEach(function(item){
+                var arr = item.split('=');
+                if(arr[0] == 'goods'){
+                    arr_goods = JSON.parse(arr[1]);
+                }
+                if(arr[0] == 'numb'){
+                   numb=arr[1];
+                }
+            })
+        }
+       if(numb!=0){
+            $('.logo_right span').html(numb);
+        }
 /*------------------------------登录注册完成----------------------------*/
 
     // 列表页左侧--------------------------------------

@@ -12,11 +12,17 @@ main .marked { font-size: 12px; height: 38px; line-height: 38px; }
 
 main .Wares { width: 412px; height: 496px; }
 
-main .Wares .wares_top { width: 412px; height: 412px; border: 1px solid #ccc; }
+main .Wares .wares_top { width: 412px; height: 412px; border: 1px solid #ccc; position: relative; }
 
 main .Wares .wares_top img { width: 410px; height: 410px; }
 
-main .Wares ul { height: 84px; width: 412px; }
+main .Wares ul { height: 84px; width: 412px; margin-top: 13px; }
+
+main .Wares ul li { width: 62px; height: 62px; border: 1px solid #ccc; margin-left: 10px; }
+
+main .Wares ul li img { width: 62px; height: 62px; }
+
+main .Wares ul li:first-child { margin-left: 0; }
 
 main .GoodsInfo { width: 580px; height: 496px; padding: 0 21px 0 32px; }
 
@@ -56,9 +62,9 @@ main .GoodsInfo .btn { margin-top: 38px; padding-left: 21px; }
 
 main .GoodsInfo .btn li { width: 200px; height: 40px; text-align: center; line-height: 40px; box-sizing: border-box; margin-right: 16px; }
 
-main .GoodsInfo .btn .buy { border: 2px solid #FF5722; color: #FF5722; }
+main .GoodsInfo .btn .buy { border: 2px solid #FF5722; color: #FF5722; cursor: pointer; }
 
-main .GoodsInfo .btn .cart { background: #FF5722; color: #fff; }
+main .GoodsInfo .btn .cart { background: #FF5722; color: #fff; cursor: pointer; }
 
 .comments_new { width: 1200px; margin: 43px auto; }
 
@@ -83,3 +89,9 @@ main .GoodsInfo .btn .cart { background: #FF5722; color: #fff; }
 .correlative .corres .comm p { font-size: 12px; line-height: 18px; }
 
 .correlative .corres .comm .newprice { display: block; width: 160px; font-size: 12px; line-height: 12px; text-align: center; color: #FF5722; }
+
+.jwzoom-big { display: none; position: absolute; width: 400px; height: 400px; overflow: hidden; z-index: 100000; }
+
+.jwzoom-big img { position: absolute; left: 0; right: 0; width: 800px; height: 800px; }
+
+.jwzoom .minzoom { display: none; position: absolute; left: 0; top: 0; width: 80px; height: 80px; border: 1px solid #fc0; background-color: #ff0; background-color: rgba(255, 255, 0, 0.3); filter: alpha(Opacity=30); }
