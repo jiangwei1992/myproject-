@@ -1,0 +1,93 @@
+header { width: 100%; }
+
+header .header { width: 100%; background: #F9F9F9; height: 42px; }
+
+header .header .header_top { width: 1200px; height: 42px; margin: 0 auto; }
+
+header .header .header_top ul { margin: 0; padding: 0; }
+
+header .header .header_top ul li { height: 42px; font-size: 12px; line-height: 42px; text-align: center; }
+
+header .header .header_top ul li span { margin-left: 10px; color: #FE5722; }
+
+header .header .header_top ul .log { margin-right: 39px; }
+
+header .header .header_top ul .log a { color: #000; }
+
+header .header .header_top ul .reg { margin-right: 30px; }
+
+header .header .header_top ul .reg a { color: #000; }
+
+header .logo { width: 1200px; height: 82px; margin: 0 auto; padding: 20px 0 10px 0; margin-bottom: 10px; box-sizing: border-box; }
+
+header .logo ul { margin: 0 auto; }
+
+header .logo ul .logo_left img { float: left; }
+
+header .logo ul .logo_right ul { height: 52px; padding-top: 22px; width: 491px; box-sizing: border-box; background: url(/src/img/step1.png) no-repeat; }
+
+header .logo ul .logo_right ul li { font-size: 12px; line-height: 30px; width: 163px; text-align: center; }
+
+header .logo ul .logo_right ul .cart_one { color: #FE5722; }
+
+main { width: 100%; }
+
+main .catname { width: 1200px; font-size: 12px; margin: 0 auto; height: 42px; line-height: 42px; background: #F1F1F1; }
+
+main .catname .check { padding-left: 5px; padding-right: 5px; }
+
+main .catname .check label { margin-left: 5px; }
+
+main .catname .goods { margin-left: 118px; }
+
+main .catname .price { margin-left: 490px; }
+
+main .catname .qty { margin-left: 154px; }
+
+main .catname .handle { margin-right: 54px; }
+
+main .main_con { width: 1200px; margin: 0 auto; }
+
+main .main_con label { font-size: 12px; height: 58px; line-height: 58px; }
+
+main .main_con .trade { border: 1px solid #ccc; border-top: 2px solid #FE5722; margin-bottom: 95px; }
+
+main .main_con .trade .corresl { width: 1200px; height: 140px; }
+
+main .main_con .trade .corresl li { height: 140px; }
+
+main .main_con .trade .corresl li input { margin-left: 20px; margin-top: 30px; }
+
+main .main_con .trade .corresl li a { display: inline-block; width: 82px; height: 82px; overflow: hidden; margin-top: 30px; margin-left: 29px; border: 1px solid #ccc; }
+
+main .main_con .trade .corresl li a img { width: 82px; height: 82px; float: left; }
+
+main .main_con .trade .corresl .title { padding-top: 30px; font-size: 12px; color: #333; box-sizing: border-box; padding-left: 15px; }
+
+main .main_con .trade .corresl .price_btn { line-height: 140px; color: #333; font-size: 12px; }
+
+main .main_con .trade .corresl .price_btn .newprice { margin-right: 120px; }
+
+main .main_con .trade .corresl .price_btn .btn-close { margin-right: 66px; }
+
+main .main_con .trade .corresl .price_btn .qty { margin-right: 150px; }
+
+main .main_con .trade .corresl:hover { background: #FFF9F0; }
+
+main .main_con .wire { width: 1200px; height: 3px; background: #bbb; margin: 0 auto; }
+
+main .main_con .main_foot { width: 1200px; height: 52px; border: 1px solid #ccc; background: #FAFAFA; font-size: 12px; line-height: 52px; margin-top: 25px; }
+
+main .main_con .main_foot .del { padding-left: 20px; }
+
+main .main_con .main_foot .checknum { margin-left: 620px; }
+
+main .main_con .main_foot .checknum span { color: #fe5722; margin: 0 5px; }
+
+main .main_con .main_foot .accounts { margin-left: 40px; }
+
+main .main_con .main_foot .accounts span { margin-left: 10px; color: #E60012; font-size: 18px; }
+
+main .main_con .main_foot .pay { width: 120px; color: #fff; background: #fe5722; text-align: center; }
+
+footer { background: #fff; }

@@ -1,0 +1,77 @@
+header{width:100%;
+    .header{width:100%;background:#F9F9F9;height:42px;
+        .header_top{width:1200px;height:42px;margin:0 auto;
+            ul{ margin:0 ;padding:0;
+                li{height:42px;font-size:12px;
+                    line-height:42px;text-align:center;
+                        span{margin-left:10px;color:#FE5722;}
+                }
+                .log{margin-right:39px;
+                    a{color:#000;}
+                }
+                .reg{margin-right:30px;a {color:#000;}
+                }
+            }   
+        }
+        
+    }
+    .logo{width:1200px;height:82px;margin:0 auto;padding:20px 0 10px 0;margin-bottom: 10px;box-sizing:border-box;
+            ul{margin:0 auto;
+                .logo_left{
+                    img{float:left;}
+                }
+                .logo_right{
+                    ul{height:52px;padding-top:22px;width:491px;box-sizing:border-box;background:url(/src/img/step1.png) no-repeat;
+
+                        li{font-size:12px;line-height:30px;width:163px;text-align:center;}
+                        .cart_one{color:#FE5722;}
+                    }
+                }
+            }
+        }
+}
+
+main{width:100%;
+   .catname{width:1200px;font-size:12px;margin:0 auto;height:42px;line-height:42px;background:#F1F1F1;
+        .check{padding-left:5px;padding-right:5px;
+            label{margin-left:5px;}
+        }
+        .goods{margin-left:118px;}
+        .price{margin-left:490px;}
+        .qty{margin-left:154px;}
+        .handle{margin-right:54px;}
+   } 
+    .main_con{width:1200px;margin:0 auto;
+        label{font-size:12px;height:58px;line-height:58px;}
+        .trade{border:1px solid #ccc;border-top:2px solid #FE5722;margin-bottom:95px;
+            .corresl{ width:1200px;height:140px;
+                li{height:140px;
+                    input{margin-left:20px;margin-top:30px;}
+                    a{display:inline-block;width:82px;height:82px;overflow:hidden;margin-top:30px;margin-left:29px;border:1px solid #ccc;
+                        img{width:82px;height:82px;float:left;}
+                    }
+                }
+                .title{padding-top:30px;font-size:12px;color:#333;box-sizing:border-box;padding-left:15px;}
+                .price_btn{line-height:140px;color:#333;font-size:12px;
+                        .newprice{margin-right:120px;}
+                        .btn-close{margin-right:66px;}
+                        .qty{margin-right:150px;}
+                }
+                &:hover{background:#FFF9F0;}
+            }
+
+        }
+        .wire{width:1200px;height:3px;background:#bbb;margin:0 auto }
+        .main_foot{width:1200px;height:52px;border:1px solid #ccc;background:#FAFAFA;font-size:12px;line-height:52px;margin-top:25px;
+            .del{padding-left:20px;}
+            .checknum{margin-left:620px;
+                span{color:#fe5722;margin:0 5px;}
+            }
+            .accounts{margin-left:40px;
+                span{margin-left:10px;color:#E60012;font-size:18px;}
+            }
+            .pay{width:120px;color:#fff;background:#fe5722;text-align:center;}
+        }
+    }
+}
+footer{background:#fff;}

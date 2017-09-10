@@ -15,6 +15,8 @@
         }
 }
 
+.understock{width:350px;height:52px;background:#FFF5F3;border:1px solid #FF5722;position:fixed;top:56px;left:540px;font-size:12px;line-height:52px;text-align:center;color:#FF5722;display:none;
+}
 // 正文样式
 main{width:1200px;margin:0 auto;
     .marked{font-size:12px;height:38px;line-height:38px;}
@@ -48,6 +50,7 @@ main{width:1200px;margin:0 auto;
         }
         .numbe_s{padding-left:13px;font-size:12px;line-height:40px;height:40px;margin-top:38px;
             input{width:98px;text-align:center;height:40px;outline:none;}
+            .reportory{color:#ccc;margin-left:10px;}
         }
 
         .btn{  margin-top:38px;padding-left:21px;
@@ -74,7 +77,7 @@ main{width:1200px;margin:0 auto;
     width:1200px;height:300px;margin:0 auto;border:1px solid #ccc;margin-bottom:30px;
     .corre{width:1200px;height:52px;font-size:14px;line-height:52px;padding-left:16px;color:#333;margin-right:10px;}
     .corres{
-        .comm{width:160px;height:247px;
+        .comm{width:160px;height:247px;margin:0 10px;
             a{
                 img{width:160px;height:160px;}
             }

@@ -4,6 +4,8 @@
 
 .navbox #nav_con #nav1 .nav_li1:first-child:hover .nav_pri2 { display: block; }
 
+.understock { width: 350px; height: 52px; background: #FFF5F3; border: 1px solid #FF5722; position: fixed; top: 56px; left: 540px; font-size: 12px; line-height: 52px; text-align: center; color: #FF5722; display: none; }
+
 main { width: 1200px; margin: 0 auto; }
 
 main .marked { font-size: 12px; height: 38px; line-height: 38px; }
@@ -48,6 +50,8 @@ main .GoodsInfo .numbe_s { padding-left: 13px; font-size: 12px; line-height: 40p
 
 main .GoodsInfo .numbe_s input { width: 98px; text-align: center; height: 40px; outline: none; }
 
+main .GoodsInfo .numbe_s .reportory { color: #ccc; margin-left: 10px; }
+
 main .GoodsInfo .btn { margin-top: 38px; padding-left: 21px; }
 
 main .GoodsInfo .btn li { width: 200px; height: 40px; text-align: center; line-height: 40px; box-sizing: border-box; margin-right: 16px; }
@@ -72,7 +76,7 @@ main .GoodsInfo .btn .cart { background: #FF5722; color: #fff; }
 
 .correlative .corre { width: 1200px; height: 52px; font-size: 14px; line-height: 52px; padding-left: 16px; color: #333; margin-right: 10px; }
 
-.correlative .corres .comm { width: 160px; height: 247px; }
+.correlative .corres .comm { width: 160px; height: 247px; margin: 0 10px; }
 
 .correlative .corres .comm a img { width: 160px; height: 160px; }
 

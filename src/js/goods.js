@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-05 20:33:57
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-09 21:30:25
+* @Last Modified time: 2017-09-10 22:36:17
 */
 
 require.config({
@@ -100,7 +100,9 @@ require(["jquery"],function($){
                 }
                 $('.price .nowprice').html('￥'+arr.nowprice)
                 $('.sales span').html(arr.sales);
-                $('.comment span').html(arr.goodsnum);
+                $('.comment span').html(arr.comment);
+
+                $('.reportory i').html(arr.repertory)
                     // 根据达到的商品小分类得到
                     corre(subclass);
 
@@ -135,15 +137,65 @@ require(["jquery"],function($){
                         contentType:"application/x-www-form-urlencoded; charset=UTF-8",
                         success:function(data){
                             structure(data,6,'.correlative')
-                        console.log(data)
-
-
+                        // console.log(data)
                         }
                     })
 
         }
 
 
+         var arr_goods=[];
+         var cookies = document.cookie;
+
+        if(cookies.length>0){
+            cookies = cookies.split('; ');
+            cookies.forEach(function(item){
+                var arr = item.split('=');
+                if(arr[0] == 'goods'){
+                    arr_goods = JSON.parse(arr[1]);
+                }
+            })
+        }
+
+
+        $('.btn .cart').click(function(){
+             var now = new Date();
+                now.setDate(now.getDate()+7);
+            var qty=$('#num').val()*1
+            var reportory=$('.reportory i').text()*1
+            // console.log(qty>reportory)
+            if(qty>reportory){
+                $('.understock').css('display','block');
+               $('.understock span').html(qty)
+               setTimeout(function(){
+                $('.understock').fadeOut()
+               }, 4000)
+            }else{
+                // console.log(goodsnum)
+                for(var i=0;i<arr_goods.length;i++){
+                    if(arr_goods[i].goodsnums === goodsnum){
+                         arr_goods[i].qtys=arr_goods[i].qtys+qty;
+                        break;
+                    }
+                }
+                if(i==arr_goods.length){
+                
+                    var goods={
+                    goodsnums:goodsnum,
+                    qtys:qty
+                    }
+                    arr_goods.push(goods);
+                }
+               
+                
+                console.log(arr_goods);
+                document.cookie="goods="+JSON.stringify(arr_goods)+';path=/src/html'+ ';expires=' + now.toString();
+               
+                 // console.log( document.cookie)
+            }
+            
+        })
+         // console.log( document.cookie)
 
     })
 

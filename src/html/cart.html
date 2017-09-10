@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>你的购物车-阳光海淘</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="../css/cart.css" />
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="header_top">
+                <ul class="clearfix">
+                    <li class="fl">您好<span class="names"></span>，欢迎光临阳光海淘</li>
+                    <li class="fr reg"><a href="#/src/html/reg.html">注册</a></li>
+                    <li class="fr log"><span>退出</span><a href="/src/html/login.html"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="logo">
+            <ul class="clearfix">
+                <li class="logo_left fl"><a href="../index.html"><img src="/src/img/logo.png"  alt="" /></a></li>
+                <li class="logo_right fr">
+                    <ul class="clearfix">
+                        <li class="fl cart_one">1、我的购物车</li>
+                        <li class="fl">2、请填写核对订单信息</li>
+                        <li class="fl">3、成功提交订单</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <ul class="catname clearfix">
+            <li class="fl check">
+                <input type="checkbox" id="checkall"/><label for="checkall">全选</label>
+            </li>
+            <li class="fl goods">商品</li>
+            <li class="fl price">单价（元）</li>
+            <li class="fl qty">数量</li>
+            <li class="fr handle">操作</li>
+        </ul>
+        <div class="main_con">
+            <input type="checkbox" id="plat"/>
+            <span></span>
+            <label for="plat">平台</label>
+            <div class="trade"></div>
+             <p class="wire"></p>
+            <ul class="clearfix main_foot">
+                <li class="fl del">删除选中商品</li>
+                <li class="fl checknum">已选择 <span class="num"></span>件商品</li>
+                <li class="fl accounts">合计（不含运费）<span class="total_prices"></span></li>
+                <li class="fr pay">去结算</li>
+            </ul>
+        </div>
+    </main>
+    <footer class="footer"></footer>
+    <script type="text/javascript" src="../lib/require.js" data-main="../js/cart.js"></script>
+</body>
+</html>
