@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-10 11:28:32
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-10 22:50:22
+* @Last Modified time: 2017-09-11 12:10:17
 */
 
 require.config({
@@ -19,6 +19,7 @@ require(["jquery"],function($){
              $(".log a").html("登录")
         $(".log span").css({display:'none'})
         var cookies = document.cookie;
+        var name;
         if(cookies.length>0){
             cookies = cookies.split('; ');
             cookies.forEach(function(item){
@@ -26,7 +27,7 @@ require(["jquery"],function($){
 
                 if(arr[0] == 'username'){
                     console.log(arr[1])
-                    var name = arr[1];
+                    name = arr[1];
                     // console.log(name)
                     $('.names').html(name);
                     $(".log a").html("");
@@ -45,11 +46,13 @@ require(["jquery"],function($){
             $('.names').html("");
             $(".log span").css({display:'none'});
             $(".log a").html("登录");
+
+            window.location.reload();
            
         })
 
         var cookies=document.cookie;
-
+        var numb;
         var goods = [];
          if(cookies.length>0){
             // 拆分成数组
@@ -60,11 +63,14 @@ require(["jquery"],function($){
                 if(arr[0] === 'goods'){
                     goods = JSON.parse(arr[1]);
                 }
+                if(arr[0]==="numb"){
+                    numb=arr[1];
+                }
             })
          }
          
         // console.log(goods);
-
+        
         $(goods).each(function(idex,item){
             // console.log(item)
             var goodsnum=item.goodsnums;
@@ -78,7 +84,11 @@ require(["jquery"],function($){
                 // 防止出现中文乱码
                 contentType:"application/x-www-form-urlencoded; charset=UTF-8",
                 success:function(data){
-                    structure(data,qty,'.trade')
+                    console.log(name!=undefined)
+                    if(name!=undefined){
+                        structure(data,qty,'.trade')
+                    }
+                    
                     // console.log(data)
 
                     // 商品总数
@@ -140,15 +150,18 @@ require(["jquery"],function($){
                 goods.forEach(function(item,idx){
                     if(item.goodsnums === guid){
                         goods.splice(idx,1);
+                        numb=numb-item.qtys;
                     }
                 });
                 console.log(goods)
                 var now = new Date();
                 now.setDate(now.getDate()+8);
                 Cookie.set('goods',JSON.stringify(goods),now);
+                document.cookie="numb="+numb+';path=/'+ ';expires=' + now.toString();
                 var currentul=$(target).closest('ul');
                 console.log(currentul);
                 currentul.remove();
+                window.location.reload();
                 // // 再次发送一遍请求
                 // console.log(goods)
                 // $('.trade').empty();

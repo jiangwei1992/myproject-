@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-04 20:13:02
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-11 02:08:20
+* @Last Modified time: 2017-09-11 09:52:58
 */
 
 // 轮播图
@@ -21,6 +21,7 @@ require(["jquery"],function($){
          $(".log a").html("登录")
         $(".log span").css({display:'none'})
         var cookies = document.cookie;
+        var names;
         if(cookies.length>0){
             cookies = cookies.split('; ');
             cookies.forEach(function(item){
@@ -28,8 +29,8 @@ require(["jquery"],function($){
 
                 if(arr[0] == 'username'){
                     console.log(arr[1])
-                    var name = arr[1];
-                    $('.names').html(name);
+                    names = arr[1];
+                    $('.names').html(names);
                     $(".log a").html("");
                     $(".log span").css({display:'block'})
 
@@ -46,7 +47,7 @@ require(["jquery"],function($){
             $('.names').html("");
             $(".log span").css({display:'none'});
             $(".log a").html("登录");
-           
+            $('.logo_right span').html(0)
         })
 
         // 购物车
@@ -65,7 +66,7 @@ require(["jquery"],function($){
                 }
             })
         }
-        if(numb!=0){
+        if(numb!=0&&names!=undefined){
             $('.logo_right span').html(numb);
         }
         

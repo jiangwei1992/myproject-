@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-05 20:33:57
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-11 02:20:31
+* @Last Modified time: 2017-09-11 12:57:08
 */
 
 require.config({
@@ -49,9 +49,31 @@ require(["jquery"],function($){
             $('.names').html("");
             $(".log span").css({display:'none'});
             $(".log a").html("登录");
+            $('.logo_right span').html(0)
            
         })
+        var cookies = document.cookie;
+        var numb=0;
+        if(cookies.length>0){
+            cookies = cookies.split('; ');
+            cookies.forEach(function(item){
+                var arr = item.split('=');
+                if(arr[0] == 'goods'){
+                    arr_goods = JSON.parse(arr[1]);
+                }
+                if(arr[0] == 'numb'){
+                   numb=arr[1];
+                }
+            })
+        }
+       if(numb!=0&&names!=undefined){
+            $('.logo_right span').html(numb);
+        }else{
+            $('.logo_right span').html(0)
+        }
 
+
+        // 放大镜的调用
          new JwZoom({width:412,position:'right'}).init();
         // 请求传到详情页的数据
         var name= location.search.substring(1).split('&');
@@ -169,7 +191,7 @@ require(["jquery"],function($){
             })
         }
         console.log(numb)
-        $('.logo_right span').html(numb);
+        // $('.logo_right span').html(numb);
 
         $('.btn .cart').click(function(){
             var now = new Date();

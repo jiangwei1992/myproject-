@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-03 19:43:27
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-07 12:05:23
+* @Last Modified time: 2017-09-11 16:32:39
 */
 
 require.config({
@@ -14,15 +14,18 @@ require.config({
 
 require(["jquery","commom"],function($){
     $('footer').load('./footer.html .Copyright')
+    var reg1;
+    var reg2;
+    var reg3;
     $("#username").blur(function() {
         var $username=$("#username").val();
         console.log($username)
         // 邮箱正则
-        var reg1 = /^[\w\-\.]+@[\da-z\-]+(\.[a-z]{2,}){1,2}$/i;
+         reg1 = /^[\w\-\.]+@[\da-z\-]+(\.[a-z]{2,}){1,2}$/i;
         // 手机号正则
-        var reg2 = /^1[34578]\d{9}$/;
+         reg2 = /^1[34578]\d{9}$/;
 
-        var reg3=/^[\u2E80-\u9FFF\da-z\-]+$/;
+         reg3=/^[\u2E80-\u9FFF\da-z\-]+$/;
 
         if(reg1.test($username)||reg2.test($username)||reg3.test($username)){
             return true
@@ -41,12 +44,14 @@ require(["jquery","commom"],function($){
    // 绑定点击事件
    $('button').click(function(){console.log(666)
         var $username=$("#username").val();
+        // 如果符合邮箱正则
+    
         var $password=$("#password").val();
             $.ajax({
             url:"../api/login.php",
             type:"get",
             async:true,
-            data:{email:$username,username:$username,password:$password},
+            data:{username:$username,password:$password},
             success:function(data2){
 
                 if(data2=="true"){
@@ -59,7 +64,7 @@ require(["jquery","commom"],function($){
                     document.cookie = 'password=' + $password +';path=/'+ ';expires=' + now.toString();
                     }
                     else{
-                        var now = new Date();
+                    var now = new Date();
                     document.cookie = 'username=' + $username +';path=/' +';expires=' + now.toString();
                     document.cookie = 'password=' + $password +';path=/'+';expires=' + now.toString();
 

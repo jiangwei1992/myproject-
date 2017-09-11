@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-08 09:14:44
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-11 02:08:44
+* @Last Modified time: 2017-09-11 16:38:40
 */
 
 require.config({
@@ -20,6 +20,7 @@ require(["jquery"],function($){
         $(".log a").html("登录")
         $(".log span").css({display:'none'})
         var cookies = document.cookie;
+        var names;
         if(cookies.length>0){
             cookies = cookies.split('; ');
             cookies.forEach(function(item){
@@ -27,9 +28,9 @@ require(["jquery"],function($){
 
                 if(arr[0] == 'username'){
                     console.log(arr[1])
-                    var name = arr[1];
-                    console.log(name)
-                    $('.names').html(name);
+                    names = arr[1];
+                    console.log(names)
+                    $('.names').html(names);
                     $(".log a").html("");
                     $(".log span").css({display:'block'})
 
@@ -46,7 +47,7 @@ require(["jquery"],function($){
             $('.names').html("");
             $(".log span").css({display:'none'});
             $(".log a").html("登录");
-           
+             $('.logo_right span').html(0)
         })
 
         // 购物车
@@ -64,13 +65,13 @@ require(["jquery"],function($){
                 }
             })
         }
-       if(numb!=0){
+       if(numb!=0&&names!=undefined){
             $('.logo_right span').html(numb);
         }
 /*------------------------------登录注册完成----------------------------*/
 
     // 列表页左侧--------------------------------------
-       $('.tit span').html('')  
+    $('.tit span').html('')  
         function jw_goodslist(data){           
         var $arr_nav=JSON.parse(data);
         var arr_side=$arr_nav[1]
@@ -101,7 +102,7 @@ require(["jquery"],function($){
 //列表页中间部分--------------------------------------------------
         // 生成商品部分
         // 生成结构的函数
-        // 封装一个生成结构的函数{data：请求返回的数据}{num:需要的数据条数}{ele:结构导入的节点（类）}
+        // 封装一个生成结构的函数{data：请求返回的数据}{num:需要的数据条数}{ele:结构导入的节点}
         
     function structure( data,num,ele) {
         var arr=$.parseJSON(data);
@@ -183,9 +184,9 @@ require(["jquery"],function($){
             $('html,body').stop().animate({'scrollTop':0},0);
         })
 
-        // 封装一个获取拥有某个classname在父元素中的位置
+        // 封装一个获取拥有某个id在父元素中的位置索引
         function idx(id){
-    // 根据参数id取得该节点
+            // 根据参数id取得该节点
             var obj = document.getElementById(id);
             // 获取该节点的父节点
             var p = obj.parentNode;
@@ -198,7 +199,7 @@ require(["jquery"],function($){
                     return i;
                 }
             }
-        // 不在父节点中，返回-1
+            // 不在父节点中，返回-1
             return -1;
         }
         
@@ -241,7 +242,7 @@ require(["jquery"],function($){
                   }
 
             })
-             var scrollTop = $(window).scrollTop();
+            var scrollTop = $(window).scrollTop();
             $('html,body').stop().animate({'scrollTop':0},0);
         })
         
